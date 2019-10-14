@@ -1,12 +1,12 @@
 def my_binary(n):
     str_binary = ''
     while n > 0:
-        str_binary += n % 2    
-
-    return reverse(str_binary)
+        str_binary += str( n % 2 )   
+        n = n // 2
+    return str_binary[::-1]
 
 def max_sequence(n):
-    binary = bin(n).split('b')[1]
+    binary = my_binary(n)
     m = 0
     new_max = 0
 
